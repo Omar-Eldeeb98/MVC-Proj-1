@@ -1,0 +1,47 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!--================= start header ============================-->
+
+    <nav class=" m-2 p-2">
+
+        <div class="container bg-black rounded p-2  d-flex align-items-center justify-content-between">
+            <div class="pages-container">
+
+                @*tag helpers way : *@
+                <a class="btn btn-danger"  href="/Home/Index">Home</a>
+                <a class="btn btn-primary" asp-controller="Home" asp-action="AboutUs" >About Us </a>
+                <a class="btn btn-success" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                <a class="btn btn-warning" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+
+            <div class="auth-cntainer">
+                <a class="btn btn-outline-danger " href="/Account/SignIn">SignIn</a>
+                <a class="btn btn-outline-success" href="/Account/SignUp">SignUp</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!--================= end header =============================-->
+    <div>
+        @RenderBody()
+    </div>
+
+    <!--================= start footer =============================-->
+    <footer class="bg-dark text-white p-2 text-center mt-2 container rounded">
+        <p class="my-auto">All rights reserved &copy; 2024, OmarEldeeb.</p>
+    </footer>
+    <!--================= end footer =============================-->
+
+</body>
+</html>
